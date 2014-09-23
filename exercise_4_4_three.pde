@@ -5,14 +5,14 @@
 int display_size_x = 400;
 int display_size_y = 400;
 
-int obj_rect_pos_x = 50;
-int obj_rect_pos_y = 50;
+int obj_rect_pos_x;
+int obj_rect_pos_y;
 
 int obj_rect_size_x = 300;
 int obj_rect_size_y = 300;
 
-int obj_elpse_pos_x = 200;
-int obj_elpse_pos_y = 200;
+int obj_elpse_pos_x;
+int obj_elpse_pos_y;
 
 int obj_elpse_r = 50;
 
@@ -25,6 +25,13 @@ void setup()
 void draw()
 {
 	fill(255, 102, 0);
+
+	obj_rect_pos_x = (display_size_x - obj_rect_size_x) / 2;
+	obj_rect_pos_y = (display_size_y - obj_rect_size_y) / 2;
+
+	obj_elpse_pos_x = (display_size_x - obj_rect_size_x) / 2 + obj_rect_size_x / 2;
+	obj_elpse_pos_y = (display_size_y - obj_rect_size_y) / 2 + obj_rect_size_y / 2;
+
 	rect(obj_rect_pos_x, obj_rect_pos_y, obj_rect_size_x, obj_rect_size_y);
 
 	ellipseMode(CENTER);
